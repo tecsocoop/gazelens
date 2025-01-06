@@ -479,6 +479,8 @@ function loadFunctions() {
         columns.classList.add(
             'columns',
             'is-fullwidth',
+            'is-flex',
+            'is-vcentered',
             'section-filters-card-columns',
             'section-filters-card-color'
         );
@@ -509,7 +511,7 @@ function createColumnPreview(config) {
         'section-filters-card-color',
         'section-filters-card-color-img',
     );
-    column.title = `Help with ${config.displayName}`;
+    column.title = `Check ${config.displayName} filter`;
 
     const previewIcon = document.createElement('img');
     previewIcon.classList.add(
@@ -560,20 +562,22 @@ function createColumnAddButton(config) {
         'section-filters-card-color',
         'handover'
     );
-    column.title = `Add ${config.displayName}`;
     column.dataset.function = config.function;
-
+    
     const addIcon = document.createElement('img');
     addIcon.classList.add(
         'is-48x48',
         'section-filters-card-color'
     );
+    addIcon.title = `Add ${config.displayName}`;
     addIcon.src = './img/work/add-circle.svg';
     addIcon.onclick = (event) => {
         addFunction(event, config);
     };
     
     const addIconInfo = document.createElement('img');
+    addIconInfo.title = `Help with ${config.displayName}`;
+
     addIconInfo.classList.add(
         'is-48x48',
         'section-filters-card-color'
@@ -1479,7 +1483,7 @@ function initGaze() {
     document.getElementById('p_start_editing').textContent = '¡Start Editing!';
 
     // [BEGINS] DELETE JUST FOR TESTING
-    loadDefault();
+    //loadDefault();
     // [ENDS] DELETE JUST FOR TESTING
 
     console.log('GAZELENS is READY !!!!');
@@ -1695,7 +1699,7 @@ function loadDefault() {
             });
     }
 
-    fetchImage('./img/delete/aa_usar.jpg').then(file => {
+    fetchImage('./img/filters/base.webp').then(file => {
         const reader = new FileReader();
 
         reader.onload = function (event) {
