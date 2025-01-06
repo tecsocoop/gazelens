@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html style="overflow: hidden;">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta data-n-head="ssr" charset="utf-8">
+        <meta data-n-head="ssr" name="viewport"
+            content="width=device-width, initial-scale=1">
+        <meta data-n-head="ssr" data-hid="description" name="description"
+            content="Technological partners for digital transformation.">
+        <meta data-n-head="ssr" name="keywords"
+            content="Open CV, Tratamientos de Imágenes, Modificación de Imágenes, Transformación de Imágens, Machine Learning, Inteligencia Artificial, ML, IA, AI, IOT, Software Factory, Partners Tecnológicos, Transformación Digital, Agroindustria, Soluciones IOT, Soluciones Fintech, Gobierno Digital, Insurtech, Polo Tecnológico Rosario, Aplicaciones y Desarrollos, somos tecso, programación y desarrollo de software">
+        <meta data-n-head="ssr" property="og:locale" content="en_US">
+        <meta data-n-head="ssr" property="og:type" content="article">
+        <meta data-n-head="ssr" property="og:title"
+            content="tecso.coop | Technological partners for digital transformation">
+        <meta data-n-head="ssr" property="og:url"
+            content="https://www.tecso.coop">
+        <meta data-n-head="ssr" property="og:site_name" content="tecso">
+        <meta data-n-head="ssr" property="og:image"
+            content="http://tecso.coop/img/card.jpg">
+        <meta data-n-head="ssr" property="og:image:secure_url"
+            content="http://tecso.coop/img/card.jpg">
+        <meta data-n-head="ssr" name="twitter:card" content="summary">
+        <meta data-n-head="ssr" name="twitter:title"
+            content="tecso.coop - Technological partners for digital transformation">
+        <meta data-n-head="ssr" name="twitter:site" content="@tecsocoop">
+        <meta data-n-head="ssr" name="twitter:image"
+            content="http://tecso.coop/img/card.jpg">
+        <meta data-n-head="ssr" name="twitter:creator" content="@tecsocoop">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>GazeLens by tecso</title>
+        <link data-n-head="ssr" rel="icon" type="image/x-icon"
+            href="favicon.ico">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.2/css/bulma.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <script async src="./js/opencv.js"
+            type="text/javascript"></script>
+        <script async src="https://docs.opencv.org/4.10.0/opencv.js"
+            type="text/javascript"></script>
+
+    </head>
+
+    <body>
+        <!-- MESSAGES -->
+        <div id="message_alert_box"
+            class="is-pulled-right is-hidden p-2 message_alert_box_column_error message_alert_box">
+            <div
+                class="columns message_alert_box_column message_alert_box_column_error m-0 p-1">
+                <div
+                    class="column is-10 message_alert_box_column_error  message_alert_border_left"
+                    id="message_alert_box_text"></div>
+                <div
+                    class="column is-2 message_alert_box_column_error message_alert_border_right">
+                    <img id="button_message_alert_box"
+                        class="button_message_alert_box m-0 p-0 message_alert_box_column_error"
+                        src="./img/work/close-left-bar.svg" />
+                </div>
+
+            </div>
+
+        </div>
+        <!-- ALERT -->
+        <div id="modal_js" class="modal">
+            <div class="modal-background"></div>
+            <button class="modal-close is-large" aria-label="close"></button>
+            <div class="modal-card alert-style">
+                <section class="modal-card-body">
+                    Do you really want to change the image for a new one?
+                </section>
+                <footer class="modal-card-foot">
+                    <div class="buttons">
+                        <button id="model_yes"
+                            class="button alert-button-color is-pulled-right">Yes</button>
+                        <button
+                            class="button alert-button-color is-pulled-right">No</button>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <section class="section is-fullwidth pb-0 pt-5" id="section_header">
+            <article class="media media-article">
+                <figure class="media-left">
+                    <img src="./img/presentation/gazelens.svg" />
+                </figure>
+                <figure class="media-left section-header-bytecso">
+                    <img src="./img/presentation/bytecso.svg" />
+                </figure>
+                <div class="media-content">
+                </div>
+                <div class="media-right">
+                    <button
+                        class="button-license font-size-default">License</button>
+                </div>
+                <div class="media-right">
+                    <button class="button-github font-size-default">
+                        <img src="./img/presentation/github.svg" />Source
+                    </button>
+                </div>
+            </article>
+            <hr class="section-header-hr">
+        </section>
+
+        <!-- Description -->
+        <section class="section is-fullwidth section-welcome"
+            id="section_welcome">
+            <div class="container columns is-centered  is-vcentered">
+                <!-- UPLOAD IMAGE -->
+                <div class="column description-column-start-editing"
+                    style="background-image: url('./img/presentation/description_upload.svg');">
+                    <section class="hero has-text-centered">
+                        <div class="hero-body">
+                            <p id="p_start_editing"
+                                class="title hero-start-editing">
+                                Wait until the loading is complete...
+                            </p>
+                        </div>
+                    </section>
+                    <div class="box has-text-centered description-upload-image"
+                        id="div_drop_file">
+                        <figure class="section-welcome-img">
+                            <img src="./img/presentation/upload_image.svg"
+                                class="section-welcome-img"
+                                alt="Upload">
+                        </figure>
+                        <button class="button button-upload" id="input_image">
+                            <input type="image"
+                                class="icon-plus-circle"
+                                src="./img/presentation/icon-plus-circle.svg" />
+                            <input type="file" id="input_file"
+                                accept="image/*" class="is-hidden" />
+                            Upload Image
+                        </button>
+                        <p class="mt-4 drop-here custom-card-column">
+                            Or drop an image here!
+                        </p>
+                    </div>
+                </div>
+                <!-- COMMENTS -->
+                <div class="column">
+                    <div
+                        class="is-fullwidth is-centered ml-6"
+                        style="margin-bottom: -90px !important;">
+                        <img class=" ml-6"
+                            style="height: 240px !important;"
+                            src="./img/presentation/gazelens_descriptionv1.png" />
+                    </div>
+                    <div class="box ">
+                        <div class="columns">
+                            <div class="column is-2">
+                                <img class="comments-icon"
+                                    src="./img/presentation/edit.svg" />
+                            </div>
+                            <div class="column is-10">
+                                <p class="comments-title">
+                                    Edit images instantly
+                                </p>
+                                <p class="comments-description">
+                                    Lorem ipsum dolor sit amet
+                                    consectetur. Hac risus quis at
+                                    viverra. Et
+                                    parturient maecenas nisl in mauris
+                                    enim. Non orci tristique sed sit eu.
+                                    Amet pretium sit blandit ac vitae
+                                    pharetra hendrerit. Ultrices cras
+                                    augue diam ipsum
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box ">
+                        <div class="columns">
+                            <div class="column is-2">
+                                <img class="comments-icon"
+                                    src="./img/presentation/code.svg" />
+                            </div>
+                            <div class="column is-10">
+                                <p class="comments-title">
+                                    Copy and Develop
+                                </p>
+                                <p class="comments-description">
+                                    Lorem ipsum dolor sit amet
+                                    consectetur. Hac risus quis at
+                                    viverra. Et
+                                    parturient maecenas nisl in mauris
+                                    enim. Non orci tristique sed sit eu.
+                                    Amet pretium sit blandit ac vitae
+                                    pharetra hendrerit. Ultrices cras
+                                    augue diam ipsum
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FILTERS -->
+        <section class="section is-fullwidth section-filters is-hidden"
+            id="section_filters">
+
+            <div class="columns">
+                <!-- Thin column close -->
+                <div class="column is-1 main-thin-column">
+                    <div class="thin-div" id="thin_div">
+                        <img class="thin-image" id="close_3_left_bar"
+                            src="./img/work/close-left-bar.svg" />
+                    </div>
+                </div>
+                <!-- Left Sidebar -->
+                <div class="column is-2 sidebar px-1"
+                    style="border-left: outset"
+                    id="left_sidebar">
+                    <div class="block ml-2 mb-2">
+                        <div class="columns">
+                            <div class="column is-6">
+                                <button id="button_original"
+                                    class="work-tab-button-hide-show p-0 m-0">
+                                    <img class=" p-0"
+                                        src="./img/work/view.svg" />
+                                    <div
+                                        class="work-tab-label-text-other is-hidden p-0"
+                                        id="div_hide_original">
+                                        Hide Original
+                                    </div>
+                                    <div id="div_show_original"
+                                        class="work-tab-label-text-other p-0">
+                                        Show Original
+                                    </div>
+                                </button>
+                                <canvas class="is-hidden p-0"
+                                    id="canvas_input"></canvas>
+                            </div>
+                            <div class="column is-6">
+                                <button id="button_histogram"
+                                    class="work-tab-button-hide-show p-0 m-0">
+                                    <img class=" p-0"
+                                        src="./img/work/statistics.svg" />
+                                    <div id="div_hide_histogram"
+                                        class="work-tab-label-text-other is-hidden p-0">
+                                        Hide Histogram
+                                    </div>
+                                    <div id="div_show_histogram"
+                                        class="work-tab-label-text-other p-0">
+                                        Show Histogram
+                                    </div>
+                                </button>
+                                <canvas class="is-hidden  p-0"
+                                    id="canvas_output_histogram"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block direction-ltr mb-2">
+                        <div class="box applied-functions p-1 ml-3">
+                            Available Filters
+                        </div>
+                    </div>
+                    <div class="block ">
+                        <div class="box custom-overflow p-1">
+                            <div class="image-list" id="available_filter_list">
+                                <!-- Repeat for each function -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WORK column  -->
+                <div class="column is-7 is-centered" id="main_work">
+                    <div class="box pt-0 is-centered">
+                        <!-- Top buttons -->
+                        <div class="field is-centered">
+                            <div class="buttons mb-3 is-centered">
+                                <button
+                                    class="work-center-button-download handover"
+                                    id="button_download_image"
+                                    title="Download Image With Filters">
+                                    <figure
+                                        class="work-center-button-download-img">
+                                        <img
+                                            class="work-center-button-download-img"
+                                            src="./img/work/download.svg" />
+                                    </figure>
+                                    <div
+                                        class="work-center-label-text-download">
+                                        Download Image
+                                    </div>
+                                </button>
+                                <figure class="vertical-divider">
+                                    <img
+                                        src="./img/work/divider-vertical.svg" />
+                                </figure>
+
+                                <button
+                                    class=" work-center-button-bottom handover"
+                                    id="button_change_image"
+                                    title="Load New Image Or Drop Over Old Image And Keep Filters">
+                                    <figure>
+                                        <img
+                                            src="./img/work/reload.svg" />
+                                    </figure>
+                                    <div class="work-center-bottom-buttons">
+                                        Change Image
+                                    </div>
+                                </button>
+                                <figure class="vertical-divider">
+                                    <img
+                                        src="./img/work/divider-vertical.svg" />
+                                </figure>
+
+                                <button
+                                    class="modal-trigger work-center-button-bottom handover"
+                                    id="abutton_new_iamge"
+                                    title="Load New Image And Start From The Begining"
+                                    data-target="modal_js">
+                                    <figure>
+                                        <img
+                                            src="./img/work/delete.svg" />
+                                    </figure>
+                                    <div class="work-center-bottom-buttons">
+                                        New Image
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Main image display -->
+                        <div class="field is-centered has-text-centered">
+                            <img id="image_src" class="is-hidden" />
+                            <canvas id="canvas_output_original"
+                                class="is-hidden"></canvas>
+                            <canvas id="canvas_output"
+                                class="m-0 p-0"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Sidebar -->
+                <div class="column is-3" id="main_filters">
+                    <div class="box pt-0">
+                        <!-- Tabs -->
+                        <div class="tabs mb-3">
+                            <ul>
+                                <li class="is-active buttons-medium-side-right">
+                                    <div class="state-layer4-side-right">
+                                        <div class="label-text4-side-right">
+                                            <a href="#tab-edit">Edit</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="state-layer4-side-right">
+                                        <div class="label-text4-side-right">
+                                            <a href="#tab-code">Code</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Tab content -->
+                        <div id="tab-content">
+                            <div id="tab-edit">
+                                <div class="block columns ">
+                                    <div class="column is-8">
+                                        <div
+                                            class="applied-functions">
+                                            Filters applied
+                                        </div>
+                                    </div>
+                                    <div class="column is-2 pb-0 handover"
+                                        id="filters_applied_arrow">
+                                        <figure id="filters_applied_arrow_down"
+                                            title="Apply Filter From Top To Bottom">
+                                            <img
+                                                src="./img/work/arrow-down.svg" />
+                                        </figure>
+                                        <figure id="filters_applied_arrow_up"
+                                            class="is-hidden"
+                                            title="Apply Filter From Bottom To Top">
+                                            <img
+                                                src="./img/work/arrow-up.svg" />
+                                        </figure>
+                                    </div>
+                                    <div class="column is-2 pb-0 handover"
+                                        id="filters_applied_delete">
+                                        <figure title="Clean Filters">
+                                            <img
+                                                src="./img/work/delete.purple.svg" />
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div
+                                    class="block  normal-overflow"
+                                    style="height: 600px !important;">
+                                    <div
+                                        class="image-list"
+                                        id="applied_functions">
+                                        <!-- Repeat for each function -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tab Code (hidden by default)-->
+                            <div id="tab-code" class="is-hidden">
+                                <div id="div_install_opencv" class="field">
+                                    <div
+                                        class="block m-0 p-0 custom-check-orientation work-right-filter-columns-text">
+                                        <input type="checkbox"
+                                            id="install_opencv">
+                                        Install OpenCV
+                                    </div>
+                                </div>
+                                <div id="div_save_image" class="field">
+                                    <div
+                                        class="block m-0 p-0 custom-check-orientation work-right-filter-columns-text">
+                                        <input type="checkbox" id="save_image">
+                                        Save
+                                        Image
+                                    </div>
+                                </div>
+                                <div id="div_display_in_colab" class="field">
+                                    <div
+                                        class="block m-0 p-0 custom-check-orientation work-right-filter-columns-text">
+                                        <input type="checkbox"
+                                            id="display_in_colab"> Display in
+                                        colab
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <!--<div
+                                        class="is-pulled-left tab-code-label-black">Python
+                                        Code
+                                    </div>-->
+                                    <div class="mb-2 is-pulled-left ">
+                                        <div class="select is-fullwidth">
+                                            <select id="source_code"
+                                                class="work-right-filter-select-code function-config-parameter-code">
+                                                <option
+                                                    value="PYTHON">Python</option>
+                                                <option
+                                                    value="JAVASCRIPT">Javascript</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="copy_code"
+                                        class="is-pulled-right handover div-inline-copy">
+                                        <img src="./img/work/copy.svg">
+                                        <div
+                                            id="copy_code_message"
+                                            class="tab-code-label-orange">
+                                            Copy
+                                        </div>
+                                    </div>
+                                    <div class="control">
+                                        <textarea
+                                            id="textarea_code"
+                                            class="textarea custom-textarea"
+                                            rows="20">
+                                    </textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="overlay" class="container "
+            style="display: none; border-radius: 0.75em !important;">
+            <div
+                class="columns is-fullwidth is-centered  is-vcentered">
+                <div class="column" style="border-radius: 0.75em !important;">
+                    <div class="block mb-2">
+                        <div class="box applied-functions-view p-1 ml-3">
+                            Original
+                        </div>
+                    </div>
+                    <figure class="media-left"
+                        style="width: 320px !important; height: 320px !important;">
+                        <img src="./img/filters/base.webp" />
+                    </figure>
+                </div>
+                <div class="column" style="border-radius: 0.75em !important;">
+                    <div class="block mb-2">
+                        <div class="box applied-functions-view p-1 ml-3">
+                            With Filter
+                        </div>
+                    </div>
+                    <figure class="media-left"
+                        style="width: 320px !important; height: 320px !important;">
+                        <img id="img_example" />
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    <script src="./js/ocv.js" type="text/javascript"></script>
+    <script src="./js/functions.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var Module = {
+            onRuntimeInitialized() { initGaze(); }
+        };
+    </script>
+</html>

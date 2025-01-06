@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Info Help</title>
+  <desc>A solid styled icon from Orion Icon Library.</desc>
+  <path data-name="layer1"
+  d="M32 0a32 32 0 1 0 32 32A32.037 32.037 0 0 0 32 0zm-2.977 15.037a3.62 3.62 0 0 1 4.96 0 3.509 3.509 0 0 1 1.02 2.469 3.5 3.5 0 1 1-7 0 3.512 3.512 0 0 1 1.02-2.469zm6.98 34.97h-8v-4H30V28.024h-1.996v-4H34v21.985h2.004z"
+  fill="#3c096c"></path>
+</svg>
