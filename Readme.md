@@ -1,10 +1,10 @@
 # Gazelens
 
-![Contributors](https://img.shields.io/github/contributors/larymak/Python-project-Scripts?style=plastic)
-![Forks](https://img.shields.io/github/forks/larymak/Python-project-Scripts)
-![Stars](https://img.shields.io/github/stars/larymak/Python-project-Scripts)
-![Licence](https://img.shields.io/github/license/larymak/Python-project-Scripts)
-![Issues](https://img.shields.io/github/issues/larymak/Python-project-Scripts)
+![Contributors](https://img.shields.io/github/contributors/tecsocoop/gazelens?style=plastic)
+![Forks](https://img.shields.io/github/forks/tecsocoop/gazelens)
+![Stars](https://img.shields.io/github/stars/tecsocoop/gazelens)
+![Licence](https://img.shields.io/github/license/tecsocoop/gazelens)
+![Issues](https://img.shields.io/github/issues/tecsocoop/gazelens)
 
 ## Description
 
@@ -17,9 +17,9 @@ Once we have achieved the desired objectives by applying the filters, we will be
 ## Contribution Guidelines
 
 The contribution guidelines are as per the
-guide [HERE](https://github.com/larymak/Python-project-Scripts/blob/main/CONTRIBUTING.md).
+guide [HERE](https://github.com/tecsocoop/gazelens/blob/main/CONTRIBUTING.md).
 
-## Instructions
+## Contribution Instructions
 
 - Fork this repository
 - Clone your forked repository
@@ -29,13 +29,6 @@ guide [HERE](https://github.com/larymak/Python-project-Scripts/blob/main/CONTRIB
 - Star this repository
 - Wait for pull request to merge
 - Celebrate your first step into the open source world and contribute more
-
-## Additional tools to help you get Started with Open-Source Contribution
-
-- [How to Contribute to Open Source Projects – A Beginner's Guide](https://www.freecodecamp.org/news/how-to-contribute-to-open-source-projects-beginners-guide/)
-- [How to Write a Good README File for Your GitHub Project](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
-
----
 
 ## Projects
 
