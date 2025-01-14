@@ -1,4 +1,4 @@
-# Gazelens
+![gazelens](docs/img/logo.png)
 
 ![Contributors](https://img.shields.io/github/contributors/tecsocoop/gazelens?style=plastic)
 ![Forks](https://img.shields.io/github/forks/tecsocoop/gazelens)
