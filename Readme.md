@@ -16,13 +16,13 @@ Once we have achieved the desired objectives by applying the filters, we will be
 
 ## How to install or run
 
-To run it you just need to clone the repository or download it and then run or open the `index.html` file in your browser.
+To run it you just need to clone the repository or download it and then run or open the `index.html` file in your browser. Or you can try it [here](https://tecsocoop.github.io/gazelens/)
 
 It is also possible to run it on your server but we are not going to go into detail on how to do this because it is a standard web application and does not require extensive configuration.
 
 ## How to use it!
 
-The way to use it is simple, we just have to upload the image we want to modify and start applying the different filters.
+The way to use it is simple, we just have to upload the image we want to modify and start applying the different filters. 
 
 Let's go with some screenshots.
 
@@ -118,8 +118,12 @@ It is important to be aware of these differences when using filtering in JavaScr
 
 Developed by tecso work cooperative - Technology - Artificial Intelligence.
 
+Know about us in [tecso.coop](https://tecso.coop/)
+
+![gazelens](docs/img/coop_flag.png) ![gazelens](docs/img/twinpines.png)
+
 ## License
 
-Copyright (c) Cooperativa de trabajo tecso. All rights reserved.
+Copyright (c) Cooperativa de Trabajo Tecso Ltda. All rights reserved.
 
 Licensed under the MIT license.
