@@ -14,21 +14,29 @@ The main motivation that led us to develop it was the need to be able to apply f
 
 Once we have achieved the desired objectives by applying the filters, we will be able to access the source code for the [Python](https://www.python.org/) and Javascript programming languages ​​so that we can use it in our projects.
 
-## Contribution Guidelines
+## How to install or run
 
-The contribution guidelines are as per the
-guide [HERE](https://github.com/tecsocoop/gazelens/blob/main/CONTRIBUTING.md).
+To run it you just need to clone the repository or download it and then run or open the `index.html` file in your browser.
 
-## Contribution Instructions
+It is also possible to run it on your server but we are not going to go into detail on how to do this because it is a standard web application and does not require extensive configuration.
 
-- Fork this repository
-- Clone your forked repository
-- Add your scripts
-- Commit and push
-- Create a pull request
-- Star this repository
-- Wait for pull request to merge
-- Celebrate your first step into the open source world and contribute more
+## How to use it!
+
+The way to use it is simple, we just have to upload the image we want to modify and start applying the different filters.
+
+Let's go with some screenshots.
+
+### Let's run
+
+![let's run](docs/img/01_start.png)
+
+### Now let's start
+
+![let's start](docs/img/02_working.png)
+
+### Applied filters
+
+![let's start](docs/img/02_working.png)
 
 ## Projects
 
@@ -79,31 +87,7 @@ To create our application, we have integrated OpenCV.js and BulmaCSS in the foll
 - OpenCV.js: We have used OpenCV.js to create the image processing algorithms that are responsible for applying the filters to the images.
 - BulmaCSS: We have used BulmaCSS to create the layout and user interface of our application. BulmaCSS has allowed us to create an attractive and easy-to-use user interface that fits the needs of our application.
 
-## How to install or run
-
-To run it you just need to clone the repository or download it and then run or open the `index.html` file in your browser.
-
-It is also possible to run it on your server but we are not going to go into detail on how to do this because it is a standard web application and does not require extensive configuration.
-
-## How to use it!
-
-The way to use it is simple, we just have to upload the image we want to modify and start applying the different filters.
-
-Let's go with some screenshots.
-
-### Let's run
-
-![let's run](docs/img/01_start.png)
-
-### Now let's start
-
-![let's start](docs/img/02_working.png)
-
-### Applied filters
-
-![let's start](docs/img/02_working.png)
-
-## Contributing (https://github.com/microsoft/vscode?tab=readme-ov-file#contributing)
+## Contributing 
 
 There are many ways in which you can participate in this project, for example:
 
@@ -111,22 +95,16 @@ There are many ways in which you can participate in this project, for example:
 - Review source code changes
 - Review the documentation and make pull requests for anything from typos to additional and new content
 
-If you are interested in fixing issues and contributing directly to the code base, please see the document How to Contribute, which covers the following:
+If you are interested in fixing issues and contributing directly to the code base, please see the document [How to Contribute](https://github.com/tecsocoop/gazelens/blob/main/CONTRIBUTING.md), which covers the following:
 
-- Coding guidelines
-- Submitting pull requests
-- Finding an issue to work on
-
-## Feedback (https://github.com/microsoft/vscode?tab=readme-ov-file#feedback)
-
-- Ask a question on Stack Overflow
-- Request a new feature
-- Upvote popular feature requests
-- File an issue
-
-## Roadmap (https://github.com/microsoft/TypeScript?tab=readme-ov-file#roadmap)
-
-For details on our planned features and future direction, please refer to our roadmap.
+- Fork this repository
+- Clone your forked repository
+- Add your scripts
+- Commit and push
+- Create a pull request
+- Star this repository
+- Wait for pull request to merge
+- Celebrate your first step into the open source world and contribute more
 
 ## Disclaimer
 
