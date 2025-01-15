@@ -24,19 +24,7 @@ It is also possible to run it on your server but we are not going to go into det
 
 The way to use it is simple, we just have to upload the image we want to modify and start applying the different filters. 
 
-Let's go with some screenshots.
-
-### Let's run
-
-![let's run](docs/img/01_start.png)
-
-### Now let's start
-
-![let's start](docs/img/02_working.png)
-
-### Applied filters
-
-![let's start](docs/img/02_working.png)
+![how to use it](docs/img/howToUseIt_1280.gif)
 
 ## Projects
 
