@@ -112,6 +112,4 @@ Know about us in [tecso.coop](https://tecso.coop/)
 
 ## License
 
-Copyright (c) Cooperativa de Trabajo Tecso Ltda. All rights reserved.
-
 Licensed under the MIT license.
